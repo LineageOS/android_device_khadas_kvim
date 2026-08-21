@@ -5,7 +5,7 @@
 
 ifneq ($(filter kvim,$(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/khadas/kvim
+FACTORY_PATH := device/khadas/kvim/factory
 VENDOR_PATH := vendor/khadas/kvim
 
 PRODUCT_INSTALL_OUT := $(PRODUCT_OUT)/aml_install
@@ -25,11 +25,12 @@ endef
 # Stages a package directory and hands it to the image packer.
 # $(1): staging directory
 # $(2): image.cfg to use
-# $(3): super image to ship as super.img
-# $(4): one extra file to include, if any
+# $(3): extra files to include, if any
 define aml-build-package
 $(hide) mkdir -p $(1)
 	$(call aml-copy-file,$(VENDOR_PATH)/radio/bootloader.img,$(1),u-boot.bin)
+	$(call aml-copy-file,$(VENDOR_PATH)/radio/bootloader-bl2.img,$(1),u-boot.bin.usb.bl2)
+	$(call aml-copy-file,$(VENDOR_PATH)/radio/bootloader-tpl.img,$(1),u-boot.bin.usb.tpl)
 	$(call aml-copy-file,$(PRODUCT_OUT)/logo.img,$(1))
 	$(call aml-copy-file,$(FACTORY_PATH)/aml_sdc_burn.ini,$(1))
 	$(call aml-copy-file,$(FACTORY_PATH)/$(2),$(1),image.cfg)
@@ -38,9 +39,9 @@ $(hide) mkdir -p $(1)
 	$(call aml-copy-file,$(PRODUCT_OUT)/recovery.img,$(1))
 	$(call aml-copy-file,$(INSTALLED_2NDBOOTLOADER_TARGET),$(1),dtb.img)
 	$(call aml-copy-file,$(PRODUCT_OUT)/dtbo.img,$(1))
-	$(call aml-copy-file,$(PRODUCT_OUT)/$(3),$(1),super.img)
 	$(call aml-copy-file,$(PRODUCT_OUT)/vbmeta.img,$(1))
-	$(if $(4),$(call aml-copy-file,$(4),$(1)))
+	$(foreach f,$(3),$(call aml-copy-file,$(f),$(1))
+	)
 	$(hide) $(AML_IMAGE_TOOL) -r $(1)/image.cfg $(1)/ $@
 	$(hide) rm -rf $(1)
 	$(hide) echo " $@ created"
@@ -51,18 +52,21 @@ NEEDED_IMAGES := \
     recovery.img \
     dtbo.img \
     vbmeta.img \
-    super.img \
-    super_empty.img \
     logo.img
 
+UPGRADE_IMAGES := \
+    odm.img \
+    system.img \
+    vendor.img
+
 $(INSTALLED_AML_INSTALL_PACKAGE_TARGET): $(addprefix $(PRODUCT_OUT)/,$(NEEDED_IMAGES)) $(ACP) $(AML_IMAGE_TOOL)
-	$(call aml-build-package,$(PRODUCT_INSTALL_OUT),image_install.cfg,super_empty.img,$(VENDOR_PATH)/radio/misc.img)
+	$(call aml-build-package,$(PRODUCT_INSTALL_OUT),image_install.cfg,$(VENDOR_PATH)/radio/misc.img)
 
 .PHONY: aml_install
 aml_install: $(INSTALLED_AML_INSTALL_PACKAGE_TARGET)
 
-$(INSTALLED_AML_UPGRADE_PACKAGE_TARGET): $(addprefix $(PRODUCT_OUT)/,$(NEEDED_IMAGES)) $(ACP) $(AML_IMAGE_TOOL)
-	$(call aml-build-package,$(PRODUCT_UPGRADE_OUT),image_upgrade.cfg,super.img)
+$(INSTALLED_AML_UPGRADE_PACKAGE_TARGET): $(addprefix $(PRODUCT_OUT)/,$(NEEDED_IMAGES) $(UPGRADE_IMAGES)) $(ACP) $(AML_IMAGE_TOOL)
+	$(call aml-build-package,$(PRODUCT_UPGRADE_OUT),image_upgrade.cfg,$(addprefix $(PRODUCT_OUT)/,$(UPGRADE_IMAGES)))
 
 .PHONY: aml_upgrade
 aml_upgrade: $(INSTALLED_AML_UPGRADE_PACKAGE_TARGET)
