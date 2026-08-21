@@ -12,7 +12,7 @@ DEVICE_DIR="$(dirname "$SCRIPT")"
 DEVICE="$(basename "$DEVICE_DIR")"                    # radxa0
 TOP="$(cd "$DEVICE_DIR/../../.." && pwd)"             # srctree root
 
-BUILDER="$TOP/hardware/amlogic/u-boot_build/build_${DEVICE}.sh"
+BUILDER="$TOP/kernel/amlogic/u-boot_build/build_${DEVICE}.sh"
 
 if [ ! -x "$BUILDER" ]; then
     echo "error: $BUILDER not found or not executable" >&2

@@ -1,6 +1,8 @@
 # Firmware - built from https://github.com/Stricted/deadpool_u-boot using https://github.com/Stricted/deadpool_u-boot_build.
 
 bootloader.img
+bootloader-bl2.img
+bootloader-tpl.img
 
 # Raw image with BCB set to `boot-recovery`
 misc.img
