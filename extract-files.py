@@ -15,7 +15,6 @@ module = ExtractUtilsModule(
     'kvim',
     'khadas',
     add_firmware_proprietary_file=True,
-    skip_main_proprietary_file=True,
 )
 
 if __name__ == '__main__':
