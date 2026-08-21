@@ -18,9 +18,6 @@ TARGET_DTB_NAME := kvim
 TARGET_KERNEL_EXT_MODULES := \
     dhd-driver/bcmdhd.101.10.591.x
 
-## Partitions
-BOARD_SUPER_PARTITION_SIZE := 2084569088
-
 ## Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
@@ -34,7 +31,7 @@ WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/dhd/parameters/firmware_path"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 ## Include the common tree BoardConfig makefile
-include device/amlogic/g12-common/BoardConfigCommon.mk
+include device/amlogic/gx-common/BoardConfigCommon.mk
 
 ## Include the proprietary BoardConfig makefile
 include vendor/khadas/kvim/BoardConfigVendor.mk
