@@ -1,6 +1,8 @@
 # Firmware
 
 # U-boot built from hardware/amlogic/u-boot
+bootloader-bl2.img
+bootloader-tpl.img
 bootloader.img
 
 # Raw image with BCB set to `boot-recovery`
