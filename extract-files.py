@@ -19,5 +19,5 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
-    utils = ExtractUtils.device_with_common(module, '../amlogic/g12-common', module.vendor)
+    utils = ExtractUtils.device_with_common(module, '../amlogic/gx-common', module.vendor)
     utils.run()

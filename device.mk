@@ -34,7 +34,7 @@ PRODUCT_SOONG_NAMESPACES += \
 include kernel/amlogic/kernel-modules/dhd-driver/firmware/wifi/wifi.mk
 
 ## Inherit from the common tree product makefile
-$(call inherit-product, device/amlogic/g12-common/g12.mk)
+$(call inherit-product, device/amlogic/gx-common/gx.mk)
 
 ## Inherit from the proprietary files makefile
-$(call inherit-product, vendor/radxa/radxa0/radxa0-vendor.mk)
+$(call inherit-product, vendor/khadas/kvim/kvim-vendor.mk)
