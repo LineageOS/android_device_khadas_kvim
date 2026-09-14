@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7afafab2_29ef8cd0",
+        "filename": "build/tasks/factory.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-09-14T16:30:48Z",
+      "side": 1,
+      "message": "don\u0027t change this copyright, no need",
+      "revId": "ae38d320013cb73bba3175a7eca6904de8403e0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea507f91_f5e40d41",
+        "filename": "build/tasks/factory.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-09-14T16:30:48Z",
+      "side": 1,
+      "message": "why re-split the recipe?\n\nwe unified it for a reason?",
+      "revId": "ae38d320013cb73bba3175a7eca6904de8403e0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
