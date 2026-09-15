@@ -33,6 +33,24 @@
       "message": "why re-split the recipe?\n\nwe unified it for a reason?",
       "revId": "ae38d320013cb73bba3175a7eca6904de8403e0e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f5d31cc_17b28799",
+        "filename": "build/tasks/factory.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-09-15T13:28:26Z",
+      "side": 1,
+      "message": "didnt get about resplit - following current g12 factory images with install and upgrade images",
+      "parentUuid": "ea507f91_f5e40d41",
+      "revId": "ae38d320013cb73bba3175a7eca6904de8403e0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
