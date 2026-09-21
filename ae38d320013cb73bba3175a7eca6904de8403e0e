@@ -51,6 +51,24 @@
       "parentUuid": "ea507f91_f5e40d41",
       "revId": "ae38d320013cb73bba3175a7eca6904de8403e0e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00e04ebf_d4fab7e8",
+        "filename": "build/tasks/factory.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-09-21T21:57:47Z",
+      "side": 1,
+      "message": "We simplified the recipe, it has a unified partition list and recipe, look at the previous version before this commit - it just changes super for super_empty.\n\nOn gx it\u0027s even easier because install image is small, then upgrade just adds system/odm/product/etc.",
+      "parentUuid": "7f5d31cc_17b28799",
+      "revId": "ae38d320013cb73bba3175a7eca6904de8403e0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
