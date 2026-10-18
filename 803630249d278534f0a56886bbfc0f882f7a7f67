@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a21b4939_1a6dfb08",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-18T13:08:03Z",
+      "side": 1,
+      "message": "By the way, you should update this: https://github.com/LineageOS/android_device_radxa_radxa0/blob/lineage-22.2/lineage.dependencies#L10-L17",
+      "revId": "803630249d278534f0a56886bbfc0f882f7a7f67",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
