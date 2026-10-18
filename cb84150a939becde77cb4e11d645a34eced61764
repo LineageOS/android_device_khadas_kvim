@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee23b9b5_ed5609d1",
+        "filename": "build/tasks/factory.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-18T12:45:25Z",
+      "side": 0,
+      "message": "Restore SPDX header",
+      "revId": "cb84150a939becde77cb4e11d645a34eced61764",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
