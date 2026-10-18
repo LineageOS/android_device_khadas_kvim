@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3a38195_7a69154a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-10-18T12:08:12Z",
+      "side": 1,
+      "message": "Verified both install paths: aml_install_package.img + ota.zip and aml_upgrade_package.img. Both installs fine.\n\nCurrent aml_install_package.img size is 51M",
+      "revId": "fb4648d77d3f8964bc7ed40f986d6a2126064eab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
