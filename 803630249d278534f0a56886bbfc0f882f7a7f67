@@ -16,6 +16,23 @@
       "message": "By the way, you should update this: https://github.com/LineageOS/android_device_radxa_radxa0/blob/lineage-22.2/lineage.dependencies#L10-L17",
       "revId": "803630249d278534f0a56886bbfc0f882f7a7f67",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c857bf0_b44b2990",
+        "filename": "build_u-boot.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-18T13:09:38Z",
+      "side": 1,
+      "message": "Drop this change and pick https://github.com/LineageOS/android_device_radxa_radxa0/commit/e1e3b69efa25f01649c4b583cc29565db18a240b before.",
+      "revId": "803630249d278534f0a56886bbfc0f882f7a7f67",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
